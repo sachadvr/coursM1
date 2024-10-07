@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  react:
+    container_name: react
+    image: react
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    working_dir: /app
+    stdin_open: true
+    tty: true
+    command: npm run start
