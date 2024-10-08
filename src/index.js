@@ -4,8 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './Login';
+import AccountCreationForm from './AccountCreationForm';
 import NotFound from './NotFound';
+import Pokemon from './Pokemon';
+import PokemonCard from './PokemonCard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,7 +15,10 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<AccountCreationForm />} />
+        <Route path="/poke" element={<Pokemon />} />
+        <Route path="/pokemon/:name" element={<PokemonCard />} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
